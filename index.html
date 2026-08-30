@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Psicóloga Clínica Beatriz Santos - Atendimento psicológico humanizado online e presencial para ansiedade, depressão, autoconhecimento e relacionamentos. CRP 06/142850.">
-  <title>Beatriz Santos | Psicóloga Clínica - Atendimento Online e Presencial</title>
+  <meta name="description" content="Beatriz Santos Psicologia Clínica - Atendimento psicológico humanizado, online e presencial. Especialista em ansiedade, depressão, autoestima e relacionamentos. CRP 06/142850.">
+  <title>Beatriz Santos | Psicologia Clínica - Atendimento Humanizado</title>
   
-  <!-- Google Fonts -->
+  <!-- Fontes do Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Estilos CSS -->
+  <!-- Estilos em CSS e Flexbox -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- CABEÇALHO / NAVEGAÇÃO -->
+  <!-- =========================================================================
+       CABEÇALHO / NAVEGAÇÃO (FLEXBOX)
+       ========================================================================= -->
   <header class="header">
     <div class="container header-container">
-      <a href="#inicio" class="logo">
+      <a href="#sobre-empresa" class="logo">
         <span class="logo-name">Beatriz Santos</span>
-        <span class="logo-subtitle">Psicóloga Clínica • CRP 06/142850</span>
+        <span class="logo-subtitle">Psicologia Clínica • CRP 06/142850</span>
       </a>
 
-      <!-- Menu Hamburguer para Celular (Puro CSS com checkbox) -->
+      <!-- Menu Hamburguer para Celular (Checkbox CSS puro) -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação">
       <label for="menu-toggle" class="menu-icon" aria-hidden="true">
         <span></span>
@@ -32,14 +34,13 @@
         <span></span>
       </label>
 
-      <!-- Links de Navegação -->
+      <!-- Navegação com Flexbox -->
       <nav class="nav">
         <ul class="nav-list">
-          <li><a href="#inicio" class="nav-link">Início</a></li>
-          <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
-          <li><a href="#atuacao" class="nav-link">Especialidades</a></li>
+          <li><a href="#sobre-empresa" class="nav-link">Sobre Nós</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#vantagens" class="nav-link">Vantagens</a></li>
           <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
-          <li><a href="#faq" class="nav-link">Dúvidas</a></li>
           <li><a href="#contato" class="btn btn-primary btn-sm">Agendar Consulta</a></li>
         </ul>
       </nav>
@@ -47,411 +48,527 @@
   </header>
 
   <main>
-    <!-- HERO SECTION (INÍCIO) -->
-    <section id="inicio" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="badge">
-            <span class="badge-dot"></span> Atendimento Online e Presencial
+    <!-- =======================================================================
+         FAIXA 1: SOBRE A EMPRESA / PROFISSIONAL (APRESENTAÇÃO & MISSÃO)
+         ======================================================================= -->
+    <section id="sobre-empresa" class="faixa faixa-hero">
+      <div class="container flex-row-reverse-responsive">
+        
+        <!-- Imagem e Destaques da Profissional -->
+        <div class="flex-col-half hero-image-wrapper">
+          <div class="image-frame">
+            <img src="img/perfil.jpg" alt="Dra. Beatriz Santos, psicóloga clínica, em seu consultório" class="hero-img">
           </div>
+          <div class="floating-badge">
+            <span class="badge-icon">🌿</span>
+            <div class="badge-text">
+              <strong>Atendimento Humanizado</strong>
+              <small>Online (Brasil/Exterior) & Presencial</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conteúdo Textual sobre a Empresa / Profissional -->
+        <div class="flex-col-half hero-content">
+          <span class="section-tag">Faixa 1 • Sobre a Empresa</span>
           <h1 class="hero-title">
-            Um espaço seguro e acolhedor para cuidar da sua <em>saúde emocional</em>.
+            Cuidado humanizado e acolhimento para sua <em>saúde emocional</em>.
           </h1>
-          <p class="hero-description">
-            Psicoterapia com base científica e escuta humanizada para ajudar você a lidar com a ansiedade, fortalecer a autoestima e encontrar clareza em suas decisões.
+          <p class="text-lead">
+            Bem-vinda(o) à <strong>Beatriz Santos Psicologia Clínica</strong>. Nosso compromisso é proporcionar um espaço seguro, ético e livre de julgamentos, auxiliando você no desenvolvimento pessoal e no alívio do sofrimento psíquico.
           </p>
+          <p class="text-body">
+            Com sólida formação acadêmica pela Universidade de São Paulo (USP) e especialização em Terapia Cognitivo-Comportamental (TCC), unimos rigor científico, empatia e escuta sensível para transformar desafios em caminhos de crescimento.
+          </p>
+          
           <div class="hero-actions">
-            <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20informações%20sobre%20as%20consultas%20psicológicas." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <a href="#contato" class="btn btn-primary">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              Agendar no WhatsApp
+              Solicitar Agendamento
             </a>
-            <a href="#sobre" class="btn btn-outline">Conhecer Mais</a>
+            <a href="#servicos" class="btn btn-outline">Conhecer Serviços</a>
           </div>
-          <div class="hero-trust">
+
+          <div class="trust-bar">
             <div class="trust-item">
-              <strong>Sigilo Absoluto</strong>
-              <span>Código de Ética CFP</span>
+              <strong>CRP 06/142850</strong>
+              <small>Registro Profissional Ativo</small>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <strong>Sigilo Ético 100%</strong>
+              <small>Conforme Código CFP</small>
             </div>
             <div class="trust-divider"></div>
             <div class="trust-item">
               <strong>Reembolso</strong>
-              <span>Recibo para convênios</span>
+              <small>Recibos para Convênios</small>
             </div>
           </div>
         </div>
 
-        <div class="hero-image-wrapper">
-          <div class="image-frame">
-            <img src="img/perfil.jpg" alt="Dra. Beatriz Santos, psicóloga clínica, em seu consultório" class="hero-img" loading="eager">
-          </div>
-          <div class="floating-badge">
-            <div class="floating-badge-icon">🌿</div>
-            <div>
-              <strong>Cuidado Humanizado</strong>
-              <span>Sessões individuais de 50 min</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- SOBRE MIM -->
-    <section id="sobre" class="section section-light">
-      <div class="container about-grid">
-        <div class="about-image-column">
-          <div class="about-img-container">
-            <img src="img/consultorio.jpg" alt="Ambiente do consultório acolhedor de psicologia" class="about-img" loading="lazy">
-          </div>
-          <div class="about-quote-box">
-            <p class="about-quote">"O autoconhecimento é o caminho mais gentil para a transformação pessoal."</p>
-          </div>
-        </div>
-
-        <div class="about-content">
-          <span class="section-tag">Sobre Mim</span>
-          <h2 class="section-title">Olá, sou a Beatriz Santos</h2>
-          <p class="text-lead">
-            Sou psicóloga clínica graduada pela Universidade de São Paulo (USP), com especialização em Terapia Cognitivo-Comportamental (TCC) e Psicologia da Saúde.
-          </p>
-          <p>
-            Acredito que a psicoterapia não é apenas sobre tratar dificuldades, mas sobre construir um espaço acolhedor, livre de julgamentos, onde você pode se expressar com total autenticidade e segurança.
-          </p>
-          <p>
-            Meu trabalho é fundamentado na escuta atenta, em técnicas baseadas em evidências e no respeito ao seu tempo e individualidade.
-          </p>
-
-          <div class="credentials-list">
-            <div class="credential-card">
-              <div class="credential-icon">🎓</div>
-              <div>
-                <strong>Formação de Excelência</strong>
-                <p>Graduação e Pós-graduação em Psicologia Clínica</p>
-              </div>
-            </div>
-            <div class="credential-card">
-              <div class="credential-icon">🛡️</div>
-              <div>
-                <strong>Ética & Sigilo Profissional</strong>
-                <p>Registro ativo no CRP 06 e ambiente protegido</p>
-              </div>
-            </div>
-            <div class="credential-card">
-              <div class="credential-icon">💻</div>
-              <div>
-                <strong>Flexibilidade de Horários</strong>
-                <p>Atendimento online para todo o Brasil e exterior</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ESPECIALIDADES / ÁREAS DE ATUAÇÃO -->
-    <section id="atuacao" class="section">
+    <!-- =======================================================================
+         FAIXA 2: PRODUTOS E SERVIÇOS OFERECIDOS
+         ======================================================================= -->
+    <section id="servicos" class="faixa faixa-alt">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">Especialidades</span>
-          <h2 class="section-title">Como posso te ajudar</h2>
+        <div class="section-header">
+          <span class="section-tag">Faixa 2 • Produtos e Serviços</span>
+          <h2 class="section-title">Nossas Áreas de Atuação e Serviços</h2>
           <p class="section-subtitle">
-            Acompanhamento terapêutico focado nas suas necessidades individuais, respeitando sua história.
+            Oferecemos modalidades terapêuticas individuais e personalizadas, com foco nas suas demandas específicas.
           </p>
         </div>
 
-        <div class="cards-grid">
-          <!-- Card 1 -->
-          <article class="card">
-            <div class="card-icon">🧠</div>
-            <h3 class="card-title">Ansiedade & Pânico</h3>
-            <p class="card-text">
-              Compreensão das crises, manejo de pensamentos acelerados e desenvolvimento de estratégias práticas para recuperar o equilíbrio e o bem-estar diário.
+        <div class="flex-cards-wrap">
+          <!-- Serviço 1 -->
+          <article class="service-card">
+            <div class="service-icon">🧠</div>
+            <h3 class="service-title">Tratamento de Ansiedade e Pânico</h3>
+            <p class="service-description">
+              Manejo de pensamentos acelerados, regulação de sintomas físicos e desenvolvimento de estratégias práticas para retomar a tranquilidade no dia a dia.
             </p>
+            <span class="service-badge">TCC Baseada em Evidências</span>
           </article>
 
-          <!-- Card 2 -->
-          <article class="card">
-            <div class="card-icon">🌱</div>
-            <h3 class="card-title">Autoestima & Insegurança</h3>
-            <p class="card-text">
-              Fortalecimento do amor-próprio, superação da autocrítica excessiva, definição de limites saudáveis e construção de maior confiança em si.
+          <!-- Serviço 2 -->
+          <article class="service-card">
+            <div class="service-icon">☀️</div>
+            <h3 class="service-title">Depressão e Regulação Emocional</h3>
+            <p class="service-description">
+              Suporte empático e estruturado para processar a tristeza profunda, resgatar a vitalidade e reencontrar o sentido e a motivação pessoal.
             </p>
+            <span class="service-badge">Acolhimento Individual</span>
           </article>
 
-          <!-- Card 3 -->
-          <article class="card">
-            <div class="card-icon">☀️</div>
-            <h3 class="card-title">Depressão & Desânimo</h3>
-            <p class="card-text">
-              Espaço acolhedor para resgatar a vitalidade, processar a tristeza profunda e reencontrar sentido e motivação nas pequenas e grandes conquistas.
+          <!-- Serviço 3 -->
+          <article class="service-card">
+            <div class="service-icon">🌱</div>
+            <h3 class="service-title">Autoestima e Autoconhecimento</h3>
+            <p class="service-description">
+              Construção de uma relação mais gentil consigo mesmo, superação da autocrítica excessiva, imposição de limites saudáveis e segurança pessoal.
             </p>
+            <span class="service-badge">Desenvolvimento Pessoal</span>
           </article>
 
-          <!-- Card 4 -->
-          <article class="card">
-            <div class="card-icon">🤝</div>
-            <h3 class="card-title">Relacionamentos & Conflitos</h3>
-            <p class="card-text">
-              Melhoria na comunicação, resolução de impasses afetivos, superação de términos e desenvolvimento de vínculos mais saudáveis e recíprocos.
+          <!-- Serviço 4 -->
+          <article class="service-card">
+            <div class="service-icon">🤝</div>
+            <h3 class="service-title">Terapia de Casal e Relacionamentos</h3>
+            <p class="service-description">
+              Aprimoramento da comunicação, alinhamento de expectativas, resolução de conflitos afetivos e fortalecimento dos vínculos interpessoais.
             </p>
+            <span class="service-badge">Convivência & Afeto</span>
           </article>
 
-          <!-- Card 5 -->
-          <article class="card">
-            <div class="card-icon">💼</div>
-            <h3 class="card-title">Burnout & Estresse</h3>
-            <p class="card-text">
-              Alívio da sobrecarga profissional, prevenção do esgotamento emocional e busca por uma rotina com mais equilíbrio entre trabalho e vida pessoal.
+          <!-- Serviço 5 -->
+          <article class="service-card">
+            <div class="service-icon">💼</div>
+            <h3 class="service-title">Burnout e Estresse Profissional</h3>
+            <p class="service-description">
+              Prevenção do esgotamento, gestão de sobrecarga de trabalho e criação de um equilíbrio duradouro entre vida pessoal e profissional.
             </p>
+            <span class="service-badge">Saúde no Trabalho</span>
           </article>
 
-          <!-- Card 6 -->
-          <article class="card">
-            <div class="card-icon">🕊️</div>
-            <h3 class="card-title">Luto & Transições de Vida</h3>
-            <p class="card-text">
-              Suporte sensível para vivenciar perdas significativas, mudanças de carreira, mudanças de cidade ou novas etapas que exigem adaptação emocional.
+          <!-- Serviço 6 -->
+          <article class="service-card">
+            <div class="service-icon">🕊️</div>
+            <h3 class="service-title">Luto e Transições Difíceis</h3>
+            <p class="service-description">
+              Acompanhamento sensível para elaboração de perdas significativas, separações, mudanças de carreira ou novas fases de vida.
             </p>
+            <span class="service-badge">Apoio em Momentos de Crise</span>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- COMO FUNCIONA O ATENDIMENTO -->
-    <section id="como-funciona" class="section section-light">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">Processo Terapêutico</span>
-          <h2 class="section-title">Como funciona o atendimento</h2>
-          <p class="section-subtitle">
-            Passos simples e transparentes para iniciar a sua jornada de cuidado emocional.
-          </p>
-        </div>
-
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <h3 class="step-title">Contato Inicial</h3>
-            <p class="step-text">
-              Você entra em contato via WhatsApp para tirar dúvidas e escolher o melhor dia e horário na agenda.
-            </p>
-          </div>
-
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <h3 class="step-title">Primeira Sessão</h3>
-            <p class="step-text">
-              Um momento de escuta e acolhimento para entender suas queixas, objetivos e histórico pessoal.
-            </p>
-          </div>
-
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <h3 class="step-title">Plano Personalizado</h3>
-            <p class="step-text">
-              Definição conjunta de metas terapêuticas alinhadas com suas prioridades e rotina de vida.
-            </p>
-          </div>
-
-          <div class="step-card">
-            <div class="step-number">04</div>
-            <h3 class="step-title">Evolução & Autonomia</h3>
-            <p class="step-text">
-              Sessões semanais com desenvolvimento de recursos internos e autonomia emocional a cada etapa.
-            </p>
-          </div>
-        </div>
-
-        <!-- Box Modalidades (Online vs Presencial) -->
-        <div class="modalities-container">
-          <div class="modality-box">
+        <!-- Modalidades de Atendimento (Online e Presencial) -->
+        <div class="modalities-flex">
+          <div class="modality-card">
             <div class="modality-icon">💻</div>
-            <h3>Terapia Online</h3>
-            <p>Atendimento por videoconferência com total privacidade, segurança e flexibilidade, onde quer que você esteja (no Brasil ou no exterior).</p>
-            <span class="modality-highlight">Ideal para quem busca praticidade e conforto</span>
+            <div class="modality-content">
+              <h3>Sessões Online (Telepsicologia)</h3>
+              <p>Atendimento por videoconferência com máxima flexibilidade e total privacidade, de onde você estiver (em qualquer cidade do Brasil ou no exterior).</p>
+            </div>
           </div>
-
-          <div class="modality-box">
+          <div class="modality-card">
             <div class="modality-icon">🛋️</div>
-            <h3>Terapia Presencial</h3>
-            <p>Sessões em consultório silencioso, climatizado e aconchegante, planejado com cuidado para proporcionar conforto absoluto.</p>
-            <span class="modality-highlight">Localização de fácil acesso</span>
+            <div class="modality-content">
+              <h3>Sessões Presenciais (Consultório)</h3>
+              <p>Espaço físico agradável, acolhedor e silencioso, planejado nos mínimos detalhes para garantir seu máximo conforto e sigilo.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PERGUNTAS FREQUENTES (FAQ) - Puro HTML/CSS com <details> -->
-    <section id="faq" class="section">
-      <div class="container faq-container">
-        <div class="section-header text-center">
-          <span class="section-tag">Tire suas dúvidas</span>
-          <h2 class="section-title">Perguntas Frequentes</h2>
+    <!-- =======================================================================
+         FAIXA 3: VANTAGENS E BENEFÍCIOS
+         ======================================================================= -->
+    <section id="vantagens" class="faixa">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Faixa 3 • Vantagens e Benefícios</span>
+          <h2 class="section-title">Por que iniciar sua terapia conosco?</h2>
           <p class="section-subtitle">
-            Respostas para as dúvidas mais comuns sobre o início da psicoterapia.
+            Conheça os diferenciais que tornam o nosso atendimento uma experiência segura, transformadora e acessível.
           </p>
         </div>
 
-        <div class="faq-list">
-          <details class="faq-item" open>
-            <summary class="faq-question">
-              <span>Como funciona a consulta online?</span>
-              <span class="faq-arrow" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                A sessão online ocorre via chamada de vídeo em uma plataforma segura (Google Meet ou Zoom). Você só precisa de uma conexão estável de internet e de um local tranquilo e privativo para falar com total sigilo.
-              </p>
+        <div class="benefits-container">
+          <!-- Imagem Ilustrativa do Consultório -->
+          <div class="benefits-image-side">
+            <img src="img/consultorio.jpg" alt="Ambiente acolhedor e confortável do consultório de psicologia" class="benefits-img">
+            <div class="benefits-quote-card">
+              <p>"Investir na sua saúde mental é o primeiro passo para uma vida com mais clareza, equilíbrio e liberdade."</p>
             </div>
-          </details>
+          </div>
 
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>Qual é a duração e a frequência das sessões?</span>
-              <span class="faq-arrow" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Cada sessão tem duração média de <strong>50 minutos</strong> e geralmente ocorre uma vez por semana, em dia e horário fixos combinados previamente.
-              </p>
+          <!-- Lista de Vantagens em Flexbox -->
+          <div class="benefits-list-side">
+            <div class="benefit-item">
+              <div class="benefit-icon-box">🛡️</div>
+              <div class="benefit-text">
+                <h3>Sigilo e Confidencialidade Absoluta</h3>
+                <p>Todas as sessões são rigorosamente protegidas pelas normas éticas do Conselho Federal de Psicologia (CFP), garantindo sua privacidade total.</p>
+              </div>
             </div>
-          </details>
 
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>Você atende por convênio ou plano de saúde?</span>
-              <span class="faq-arrow" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Os atendimentos são particulares. No entanto, forneço <strong>recibo e nota fiscal</strong> que você pode enviar ao seu convênio médico para solicitar o <em>reembolso</em> do valor das consultas (a maioria dos planos oferece essa cobertura).
-              </p>
+            <div class="benefit-item">
+              <div class="benefit-icon-box">📄</div>
+              <div class="benefit-text">
+                <h3>Emissão de Recibos para Reembolso</h3>
+                <p>Fornecemos recibos e notas fiscais com detalhamento para que você possa solicitar reembolso junto ao seu plano de saúde / convênio.</p>
+              </div>
             </div>
-          </details>
 
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>Como saber se a terapia é para mim?</span>
-              <span class="faq-arrow" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                A terapia é indicada para qualquer pessoa que sinta necessidade de apoio emocional, deseje se conhecer melhor, esteja passando por um momento difícil ou queira desenvolver habilidades para lidar com as demandas da vida. Você não precisa estar em crise para buscar ajuda.
-              </p>
+            <div class="benefit-item">
+              <div class="benefit-icon-box">🔬</div>
+              <div class="benefit-text">
+                <h3>Abordagem Científica e Eficaz (TCC)</h3>
+                <p>Utilização de técnicas com eficácia comprovada pela ciência, focando em ferramentas práticas que geram resultados consistentes.</p>
+              </div>
             </div>
-          </details>
 
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>Como posso agendar a primeira sessão?</span>
-              <span class="faq-arrow" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-answer">
-              <p>
-                Basta clicar no botão de agendamento ou enviar uma mensagem pelo WhatsApp. Conversaremos sobre suas disponibilidades de horários e esclarecerei qualquer dúvida inicial antes de marcar o seu atendimento.
-              </p>
+            <div class="benefit-item">
+              <div class="benefit-icon-box">⏰</div>
+              <div class="benefit-text">
+                <h3>Flexibilidade de Horários</h3>
+                <p>Agenda adaptável com opções de atendimento nos períodos da manhã, tarde ou noite para conciliar facilmente com sua rotina.</p>
+              </div>
             </div>
-          </details>
+
+            <div class="benefit-item">
+              <div class="benefit-icon-box">❤️</div>
+              <div class="benefit-text">
+                <h3>Escuta Humanizada e Sem Julgamentos</h3>
+                <p>Um ambiente caloroso onde seus sentimentos são validados e respeitados no seu próprio ritmo, sem pressões externas.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SEÇÃO DE CONTATO & AGENDAMENTO -->
-    <section id="contato" class="section section-cta">
-      <div class="container cta-box">
-        <div class="cta-content">
-          <span class="section-tag section-tag-light">Primeiro Passo</span>
-          <h2 class="cta-title">Pronta(o) para começar a cuidar de você?</h2>
-          <p class="cta-text">
-            Dê o primeiro passo rumo a uma vida com mais leveza, equilíbrio e autoconhecimento. Entre em contato para verificar horários disponíveis.
+    <!-- =======================================================================
+         FAIXA 4: OUTRAS INFORMAÇÕES ESSENCIAIS (COMO FUNCIONA & DEPOIMENTOS)
+         ======================================================================= -->
+    <section id="como-funciona" class="faixa faixa-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Faixa 4 • Informações Essenciais</span>
+          <h2 class="section-title">Como Funciona a Jornada Terapêutica</h2>
+          <p class="section-subtitle">
+            Um processo claro, estruturado e transparente em 4 etapas para que você saiba exatamente o que esperar.
           </p>
-          <div class="cta-buttons">
-            <a href="https://wa.me/5511999999999?text=Olá%20Beatriz,%20gostaria%20de%20agendar%20uma%20consulta%20de%20psicoterapia." target="_blank" rel="noopener noreferrer" class="btn btn-cta">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              Conversar no WhatsApp
-            </a>
+        </div>
+
+        <!-- Passo a Passo em Flexbox -->
+        <div class="steps-flex">
+          <div class="step-box">
+            <span class="step-num">01</span>
+            <h3 class="step-heading">Contato & Agendamento</h3>
+            <p class="step-desc">Você preenche o formulário ou envia mensagem via WhatsApp para escolher o melhor dia e horário disponível.</p>
+          </div>
+
+          <div class="step-box">
+            <span class="step-num">02</span>
+            <h3 class="step-heading">Primeira Sessão</h3>
+            <p class="step-desc">Um encontro inicial de 50 minutos para compreender suas principais queixas, histórico e expectativas com a terapia.</p>
+          </div>
+
+          <div class="step-box">
+            <span class="step-num">03</span>
+            <h3 class="step-heading">Plano Terapêutico</h3>
+            <p class="step-desc">Definição conjunta de metas e estratégias personalizadas de acordo com as suas prioridades de vida.</p>
+          </div>
+
+          <div class="step-box">
+            <span class="step-num">04</span>
+            <h3 class="step-heading">Evolução & Autonomia</h3>
+            <p class="step-desc">Acompanhamento contínuo semanal, desenvolvendo recursos emocionais para lidar com os desafios de forma independente.</p>
           </div>
         </div>
 
-        <div class="contact-info-card">
-          <h3 class="contact-info-title">Canais de Atendimento</h3>
+        <!-- Depoimentos e Avaliações de Pacientes (Prova Social) -->
+        <div class="testimonials-block">
+          <h3 class="testimonials-title">O que dizem os pacientes</h3>
+          <div class="testimonials-flex">
+            
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "A terapia com a Beatriz transformou minha forma de lidar com a ansiedade no trabalho. Hoje consigo ter calma e segurança nas minhas tomadas de decisão."
+              </p>
+              <div class="testimonial-author">
+                <strong>M. F.</strong>
+                <span>Paciente Terapia Online • 32 anos</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Espaço extremamente acolhedor e profissional. Pela primeira vez me senti realmente ouvida e compreendida sem nenhum tipo de julgamento."
+              </p>
+              <div class="testimonial-author">
+                <strong>C. R.</strong>
+                <span>Paciente Presencial • 28 anos</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "As técnicas práticas de TCC me ajudaram a superar um momento difícil de luto e reconstruir minha autoestima. Recomendo de olhos fechados!"
+              </p>
+              <div class="testimonial-author">
+                <strong>R. S.</strong>
+                <span>Paciente Terapia Online • 41 anos</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Perguntas Frequentes (FAQ) com <details> nativo -->
+        <div class="faq-section">
+          <h3 class="faq-title">Dúvidas Frequentes</h3>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-question">
+                <span>Qual é a duração e a frequência das sessões?</span>
+                <span class="faq-arrow"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>As sessões têm duração média de <strong>50 minutos</strong> e costumam ocorrer uma vez por semana em dia e horário fixos combinados previamente.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>Como funciona o reembolso por plano de saúde?</span>
+                <span class="faq-arrow"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Você realiza o pagamento da consulta particular e recebe um recibo/nota fiscal detalhado com CRP e dados exigidos pelo seu convênio para solicitar o reembolso conforme a tabela do seu plano.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>O que é necessário para o atendimento online?</span>
+                <span class="faq-arrow"></span>
+              </summary>
+              <div class="faq-answer">
+                <p>Apenas um dispositivo com câmera e microfone (celular, notebook ou tablet), conexão de internet estável e um local tranquilo onde você possa falar com privacidade.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         FAIXA 5: CHAMADA PARA CONTATO ATRAVÉS DE FORMULÁRIO (CONVERSÃO)
+         ======================================================================= -->
+    <section id="contato" class="faixa faixa-contact">
+      <div class="container">
+        
+        <div class="contact-card-wrapper">
           
-          <div class="contact-item">
-            <div class="contact-item-icon">📍</div>
-            <div>
-              <strong>Consultório Presencial</strong>
-              <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP</p>
-            </div>
+          <!-- Lado Esquerdo: Chamada e Formulário de Contato (Flexbox) -->
+          <div class="contact-form-side">
+            <span class="section-tag">Faixa 5 • Entre em Contato</span>
+            <h2 class="form-main-title">Dê o primeiro passo pelo seu bem-estar</h2>
+            <p class="form-main-desc">
+              Preencha o formulário abaixo com suas informações e preferências. Entraremos em contato com você o mais breve possível para confirmar o melhor horário.
+            </p>
+
+            <!-- FORMULÁRIO COMPLETO -->
+            <form action="https://wa.me/5511999999999" method="GET" target="_blank" class="contact-form">
+              
+              <div class="form-group">
+                <label for="nome" class="form-label">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" class="form-input" placeholder="Ex: Maria Silva" required>
+              </div>
+
+              <div class="form-row-flex">
+                <div class="form-group flex-1">
+                  <label for="email" class="form-label">E-mail *</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="form-group flex-1">
+                  <label for="telefone" class="form-label">Telefone / WhatsApp *</label>
+                  <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(11) 99999-9999" required>
+                </div>
+              </div>
+
+              <div class="form-row-flex">
+                <div class="form-group flex-1">
+                  <label for="modalidade" class="form-label">Modalidade de Interesse</label>
+                  <select id="modalidade" name="modalidade" class="form-select">
+                    <option value="online">Terapia Online (Vídeo)</option>
+                    <option value="presencial">Terapia Presencial (Consultório)</option>
+                    <option value="duvida">Ainda estou em dúvida</option>
+                  </select>
+                </div>
+
+                <div class="form-group flex-1">
+                  <label for="periodo" class="form-label">Melhor Período para Atendimento</label>
+                  <select id="periodo" name="periodo" class="form-select">
+                    <option value="manha">Manhã (08h às 12h)</option>
+                    <option value="tarde">Tarde (13h às 18h)</option>
+                    <option value="noite">Noite (18h às 21h)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem" class="form-label">Mensagem ou Motivo da Busca (Opcional)</label>
+                <textarea id="mensagem" name="mensagem" rows="4" class="form-textarea" placeholder="Conte brevemente o que você gostaria de trabalhar na psicoterapia..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-submit">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  Enviar Mensagem e Solicitar Horário
+                </button>
+              </div>
+
+            </form>
           </div>
 
-          <div class="contact-item">
-            <div class="contact-item-icon">📱</div>
-            <div>
-              <strong>WhatsApp / Telefone</strong>
-              <p>(11) 99999-9999</p>
+          <!-- Lado Direito: Informações de Contato Direto e Localização -->
+          <div class="contact-info-side">
+            <h3 class="info-side-title">Canais de Atendimento</h3>
+            <p class="info-side-text">Prefere falar agora mesmo? Entre em contato pelos canais diretos abaixo:</p>
+
+            <div class="info-items-list">
+              
+              <div class="info-card-item">
+                <div class="info-icon">📱</div>
+                <div>
+                  <strong>WhatsApp & Telefone</strong>
+                  <p><a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">(11) 99999-9999</a></p>
+                </div>
+              </div>
+
+              <div class="info-card-item">
+                <div class="info-icon">✉️</div>
+                <div>
+                  <strong>E-mail Profissional</strong>
+                  <p><a href="mailto:contato@beatrizpsicologia.com.br">contato@beatrizpsicologia.com.br</a></p>
+                </div>
+              </div>
+
+              <div class="info-card-item">
+                <div class="info-icon">📍</div>
+                <div>
+                  <strong>Consultório Presencial</strong>
+                  <p>Av. Paulista, 1000 - Conj. 52<br>Bela Vista, São Paulo - SP</p>
+                </div>
+              </div>
+
+              <div class="info-card-item">
+                <div class="info-icon">🕒</div>
+                <div>
+                  <strong>Horários de Funcionamento</strong>
+                  <p>Segunda a Sexta: 08:00 às 21:00<br>Sábados: 08:00 às 13:00</p>
+                </div>
+              </div>
+
             </div>
+
+            <!-- Botão de WhatsApp Imediato -->
+            <div class="quick-whatsapp-box">
+              <a href="https://wa.me/5511999999999?text=Olá%20Beatriz,%20gostaria%20de%20tirar%20dúvidas%20sobre%20as%20consultas." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-direct">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.128-.521-1.615-.67-2.66-2.307-2.74-2.414-.08-.107-.667-.887-.667-1.69 0-.803.42-1.197.57-1.357.15-.16.326-.2.435-.2.11 0 .218.001.313.006.1.005.234-.038.366.28.138.334.472 1.15.513 1.234.041.085.068.184.014.293-.055.109-.082.176-.164.272-.082.096-.172.215-.246.288-.082.08-.168.167-.072.331.096.164.425.702.912 1.135.626.557 1.154.729 1.318.81.164.082.26.07.357-.041.097-.112.415-.484.526-.649.111-.165.221-.137.371-.082.15.055.952.449 1.116.531.164.082.273.123.313.191.04.068.04.396-.104.801z"/>
+                </svg>
+                Atendimento Rápido no WhatsApp
+              </a>
+            </div>
+
           </div>
 
-          <div class="contact-item">
-            <div class="contact-item-icon">✉️</div>
-            <div>
-              <strong>E-mail</strong>
-              <p>contato@beatrizpsicologia.com.br</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-item-icon">🕒</div>
-            <div>
-              <strong>Horários de Atendimento</strong>
-              <p>Segunda a Sexta: 08h às 20h<br>Sábados: 08h às 13h</p>
-            </div>
-          </div>
         </div>
+
       </div>
     </section>
   </main>
 
-  <!-- RODAPÉ (FOOTER) -->
+  <!-- =========================================================================
+       RODAPÉ (FLEXBOX)
+       ========================================================================= -->
   <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <span class="footer-logo">Beatriz Santos</span>
-          <p class="footer-desc">Psicóloga Clínica • CRP 06/142850<br>Atendimento online e presencial humanizado focado em saúde mental e qualidade de vida.</p>
-        </div>
-
-        <div class="footer-links">
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#atuacao">Especialidades</a></li>
-            <li><a href="#como-funciona">Como Funciona</a></li>
-            <li><a href="#faq">Perguntas Frequentes</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-notice">
-          <h4>Aviso Importante</h4>
-          <p>
-            Este site e serviço não realizam atendimento de emergência ou urgência psicológica. Em situações de crise, procure o pronto-socorro mais próximo ou entre em contato com o <strong>CVV (Centro de Valorização da Vida)</strong> pelo telefone <strong>188</strong> (ligação gratuita 24h).
-          </p>
-        </div>
+    <div class="container footer-flex">
+      
+      <div class="footer-col footer-col-brand">
+        <span class="footer-logo">Beatriz Santos</span>
+        <p class="footer-desc">
+          Psicologia Clínica & Psicoterapia<br>
+          CRP 06/142850 • Atendimento Presencial e Online em todo o Brasil.
+        </p>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026 Dra. Beatriz Santos - Todos os direitos reservados.</p>
-        <p class="footer-crp">Atendimento em conformidade com o Código de Ética Profissional do Psicólogo (CFP).</p>
+      <div class="footer-col footer-col-links">
+        <h4>Mapa do Site</h4>
+        <ul>
+          <li><a href="#sobre-empresa">Sobre Nós</a></li>
+          <li><a href="#servicos">Produtos & Serviços</a></li>
+          <li><a href="#vantagens">Vantagens & Benefícios</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#contato">Formulário de Contato</a></li>
+        </ul>
       </div>
+
+      <div class="footer-col footer-col-notice">
+        <h4>Aviso de Urgência & Ética</h4>
+        <p>
+          Em conformidade com o Código de Ética Profissional do Psicólogo. Este serviço não realiza plantão para casos de emergência. Em situações de crise, ligue gratuitamente para o <strong>CVV (188)</strong> ou procure o pronto-socorro mais próximo.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom-flex">
+      <p>&copy; 2026 Beatriz Santos Psicologia Clínica. Todos os direitos reservados.</p>
+      <p class="footer-tagline">Construído com HTML, CSS e Flexbox puro.</p>
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE DE WHATSAPP (PURO HTML/CSS) -->
-  <a href="https://wa.me/5511999999999?text=Olá%20Beatriz,%20gostaria%20de%20saber%20mais%20sobre%20as%20consultas." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+  <!-- BOTÃO FLUTUANTE DE WHATSAPP (PURO HTML & CSS) -->
+  <a href="https://wa.me/5511999999999?text=Olá%20Beatriz,%20gostaria%20de%20informações%20sobre%20a%20terapia." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
     <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.072-2.128-.521-1.615-.67-2.66-2.307-2.74-2.414-.08-.107-.667-.887-.667-1.69 0-.803.42-1.197.57-1.357.15-.16.326-.2.435-.2.11 0 .218.001.313.006.1.005.234-.038.366.28.138.334.472 1.15.513 1.234.041.085.068.184.014.293-.055.109-.082.176-.164.272-.082.096-.172.215-.246.288-.082.08-.168.167-.072.331.096.164.425.702.912 1.135.626.557 1.154.729 1.318.81.164.082.26.07.357-.041.097-.112.415-.484.526-.649.111-.165.221-.137.371-.082.15.055.952.449 1.116.531.164.082.273.123.313.191.04.068.04.396-.104.801z"/>
     </svg>
-    <span class="whatsapp-text">Agende sua Sessão</span>
+    <span class="whatsapp-text">Agende no WhatsApp</span>
   </a>
 
 </body>
